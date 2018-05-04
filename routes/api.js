@@ -8,7 +8,7 @@ var router = express.Router();
 var User = require("../models/user");
 var Book = require("../models/book");
 
-router.post('/signup', function(req, res) {
+/*router.post('/signup', function(req, res) {
   if (!req.body.username || !req.body.password) {
     res.json({success: false, msg: 'Please pass username and password.'});
   } else {
@@ -82,7 +82,7 @@ router.get('/book', passport.authenticate('jwt', { session: false}), function(re
   } else {
     return res.status(403).send({success: false, msg: 'Unauthorized.'});
   }
-});
+});*/
 
 getToken = function (headers) {
   if (headers && headers.authorization) {
